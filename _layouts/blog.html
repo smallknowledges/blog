@@ -18,16 +18,16 @@
           </div>
         <div class="navbar-search" onclick="">
             <span class="icon-search"></span>
-            <form id="cb-search-btn" method="post" action="/l" role="search">
-                <span class="search-box">
-                    <input type="text" id="input" class="input" name="s" required="true"  placeholder="Search..." maxlength="30" autocomplete="off">
-                </span>
+            <form id="cb-search-btn"  role="search">
+         <span class="search-box">
+         <input type="text" class="input" id="cb-search-content" required="true" placeholder="Search..." maxlength="30" autocomplete="off">
+        </span>
             </form>
         </div>
         <div class="navbar-mobile-menu" onclick="">
             <span class="icon-menu cross"><span class="middle"></span></span>
             <ul>
-                       {% for link in site.links %}           
+               {% for link in site.links %}           
                 <li><a href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">{{ link.name }}</a></li>
                  {% endfor %}
             </ul>
@@ -217,19 +217,5 @@ var postDirectoryBuild = function() {
 postDirectoryBuild();
 </script>
 <script src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
-<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
-      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
-    <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 60px" placeholder="文章标题 日期 标签" >
-    <div style="position: fixed; top: 16px; right: 16px; ">
-        <img src="/search/img/cb-close.png"  id="cb-close-btn"/>
-    </div>
-</div>
-<div style="position: fixed; right: 16px; bottom: 20px;">
-    <img src="/search/img/cb-search.png"  id="cb-search-btn"  title="双击ctrl试一下"/>
-</div>
-<link rel="stylesheet" href="/search/css/cb-search.css">
-<script src="/search/js/bootstrap3-typeahead.min.js"></script>
-<script src="/search/js/cb-search.js"></script>
 </body>
 </html>
