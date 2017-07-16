@@ -6,8 +6,6 @@
     <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
     <title>{{ page.title }} - {{ site.title }}</title>
     {% include head.html %}
-<script type="text/javascript" src="http://moonjs.ga/dist/moon.js"></script>
-
   </head>
 <body class="" gtools_scp_screen_capture_injected="true">
 <header id="header" class="header bg-white">
@@ -121,10 +119,11 @@
 	</div>
 </div> -->
 {% include foot.html %}
-
+<!--liberxueconnnet-menu-->
 <div id="directory-content" class="directory-content">
     <div id="directory"></div>
 </div>
+<!--liberxueconnnet-menu-->
 <script>
 var postDirectoryBuild = function() {
     var postChildren = function children(childNodes, reg) {
@@ -214,115 +213,6 @@ var postDirectoryBuild = function() {
     createPostDirectory(document.getElementById('post-content'),document.getElementById('directory'), true);
 };
 postDirectoryBuild();
-</script>
-<script>
-(function () {
-    window.TypechoComment = {
-        dom : function (id) {
-            return document.getElementById(id);
-        },
-        create : function (tag, attr) {
-            var el = document.createElement(tag);
-            for (var key in attr) {
-                el.setAttribute(key, attr[key]);
-            }
-            return el;
-        },
-        reply : function (cid, coid) {
-            var comment = this.dom(cid), parent = comment.parentNode,
-                response = this.dom('respond-post-52'),
-                input = this.dom('comment-parent'),
-                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
-                textarea = response.getElementsByTagName('textarea')[0];
-            if (null == input) {
-                input = this.create('input', {
-                    'type' : 'hidden',
-                    'name' : 'parent',
-                    'id'   : 'comment-parent'
-                });
-
-                form.appendChild(input);
-            }
-            input.setAttribute('value', coid);
-            if (null == this.dom('comment-form-place-holder')) {
-                var holder = this.create('div', {
-                    'id' : 'comment-form-place-holder'
-                });
-
-                response.parentNode.insertBefore(holder, response);
-            }
-            comment.appendChild(response);
-            this.dom('cancel-comment-reply-link').style.display = '';
-            if (null != textarea && 'text' == textarea.name) {
-                textarea.focus();
-            }
-            return false;
-        },
-        cancelReply : function () {
-            var response = this.dom('respond-post-52'),
-            holder = this.dom('comment-form-place-holder'),
-            input = this.dom('comment-parent');
-            if (null != input) {
-                input.parentNode.removeChild(input);
-            }
-            if (null == holder) {
-                return true;
-            }
-            this.dom('cancel-comment-reply-link').style.display = 'none';
-            holder.parentNode.insertBefore(response, holder);
-            return false;
-        }
-    };
-})();
-</script>
-<script src="https://cdn.bootcss.com/headroom/0.9.1/headroom.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.10.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js"></script>
-<script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
-<script>
-var postDirectory = new Headroom(document.getElementById("directory-content"), {
-    tolerance: 0,
-        offset : 280,    classes: {
-        initial: "initial",
-        pinned: "pinned",
-        unpinned: "unpinned"
-    }
-});
-postDirectory.init();
-var header = new Headroom(document.getElementById("header"), {
-    tolerance: 0,
-    offset : 80,
-    classes: {
-      initial: "animated",
-      pinned: "slideDown",
-      unpinned: "slideUp"
-    }
-});
-header.init();
-if ('addEventListener' in document) {
-    document.addEventListener('DOMContentLoaded', function() {
-        FastClick.attach(document.body);
-    }, false);
-}
-</script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-        inlineMath:  [ ["$", "$"] ],
-        displayMath: [ ["$$","$$"] ],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
-        ignoreClass:"comment-content"
-    },
-    "HTML-CSS": {
-        availableFonts: ["STIX","TeX"],
-        showMathMenu: false
-    }
-});
-MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 </script>
 <script src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
