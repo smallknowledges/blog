@@ -27,15 +27,13 @@
 
 
   
-<script type="text/javascript" src="http://moonjs.ga/dist/moon.js"></script>
-
   </head>
 <body class="" gtools_scp_screen_capture_injected="true">
 <header id="header" class="header bg-white">
     <div class="navbar-container">
         <a href="/" class="navbar-logo">LiberXue</a>
         <div class="navbar-menu">
-                                 
+                         
             <a href="http://localhost:4000/">首页</a>
                              
             <a href="http://localhost:4000/book">书籍</a>
@@ -51,9 +49,9 @@
           </div>
         <div class="navbar-search" onclick="">
             <span class="icon-search"></span>
-            <form id="search" method="post" action="/l" role="search">
+            <form id="cb-search-btn" method="post" action="/l" role="search">
                 <span class="search-box">
-                    <input type="text" id="input" class="input" name="s" required="true" placeholder="Search..." maxlength="30" autocomplete="off">
+                    <input type="text" id="input" class="input" name="s" required="true"  placeholder="Search..." maxlength="30" autocomplete="off">
                 </span>
             </form>
         </div>
@@ -77,14 +75,16 @@
         </div>
     </div>
 </header>
-<div class="post-header-thumb  bg-">
-	<div class="post-header-thumb-op" style="background-image:url('http://ot1cc1u9t.bkt.clouddn.com/17-7-16/33614781.jpg');"></div>
-	<div class="post-header-thumb-cover">
+<div class="post-header-thumb bg-white}">
+	<div class="post-header-thumb-op"></div>
+	<div class="post-header-thumb">
 		<div class="post-header-thumb-container">
-			<div class="post-header-thumb-title">
-				 MAC 中该磁盘不能被分区，因为文件系统验证失败错误代码8</div>
-			<div class="post-header-thumb-meta"> 
-				<time datetime="2016-05-22 00:00:00" itemprop="datePublished">2016-05-22 00:00:00</time>
+    <h1 class="post-title" itemprop="name headline">
+	MAC 中该磁盘不能被分区，因为文件系统验证失败错误代码8</h1>
+		 <div class="post-data">  
+	 <time datetime="2016-05-22 00:00:00" itemprop="datePublished">发布时间：2016-05-22 00:00:00</time>
+     <a href="/tags#Mac">博客分类: Mac</a>
+    <a href="#read"> 阅读次数: comments</a> 
 			</div>
             <div class="post-tags">
                 
@@ -217,11 +217,10 @@
             <div class="meta-item meta-copyright">
                 <div class="meta-copyright-info">
                     <a href="/" class="info-logo">
-                        <!-- <img src="https://img.metaquant.org/784fff2.png" alt="MetaQuant" /> -->
-                                           LiberXue </a>
+                         <img src="http://localhost:4000/stylesheets/images/logo-liberxue.png" alt="LiberXue_blog" /> </a>
                     <div class="info-text">
-                        <p>Theme is <a href="https://github.com/liberxue" target="_blank">Pinghsu</a> by <a href="http://www.liberxue.com/" target="_blank">liberxue</a></p>
-                        <p>Powered by <a href="#" target="_blank" rel="nofollow">Jekyll</a></p>
+                        <p>Theme is <a href="https://github.com/liberxue" target="_blank">Jekyllliberxue</a> by <a href="http://www.liberxue.com/" target="_blank">liberxue</a></p>
+                        <p>Powered by <a href="http://localhost:4000/tags/#Jekyll" target="_blank" rel="nofollow">Jekyll</a></p>
                         <p>&copy; 2017 <a href="/feed.xml">liberxue.blog</a></p>
                     </div>
                 </div>
@@ -313,10 +312,11 @@
 		</div>
     </div>
 </footer>
-
+<!--liberxueconnnet-menu-->
 <div id="directory-content" class="directory-content">
     <div id="directory"></div>
 </div>
+<!--liberxueconnnet-menu-->
 <script>
 var postDirectoryBuild = function() {
     var postChildren = function children(childNodes, reg) {
@@ -407,115 +407,20 @@ var postDirectoryBuild = function() {
 };
 postDirectoryBuild();
 </script>
-<script>
-(function () {
-    window.TypechoComment = {
-        dom : function (id) {
-            return document.getElementById(id);
-        },
-        create : function (tag, attr) {
-            var el = document.createElement(tag);
-            for (var key in attr) {
-                el.setAttribute(key, attr[key]);
-            }
-            return el;
-        },
-        reply : function (cid, coid) {
-            var comment = this.dom(cid), parent = comment.parentNode,
-                response = this.dom('respond-post-52'),
-                input = this.dom('comment-parent'),
-                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
-                textarea = response.getElementsByTagName('textarea')[0];
-            if (null == input) {
-                input = this.create('input', {
-                    'type' : 'hidden',
-                    'name' : 'parent',
-                    'id'   : 'comment-parent'
-                });
-
-                form.appendChild(input);
-            }
-            input.setAttribute('value', coid);
-            if (null == this.dom('comment-form-place-holder')) {
-                var holder = this.create('div', {
-                    'id' : 'comment-form-place-holder'
-                });
-
-                response.parentNode.insertBefore(holder, response);
-            }
-            comment.appendChild(response);
-            this.dom('cancel-comment-reply-link').style.display = '';
-            if (null != textarea && 'text' == textarea.name) {
-                textarea.focus();
-            }
-            return false;
-        },
-        cancelReply : function () {
-            var response = this.dom('respond-post-52'),
-            holder = this.dom('comment-form-place-holder'),
-            input = this.dom('comment-parent');
-            if (null != input) {
-                input.parentNode.removeChild(input);
-            }
-            if (null == holder) {
-                return true;
-            }
-            this.dom('cancel-comment-reply-link').style.display = 'none';
-            holder.parentNode.insertBefore(response, holder);
-            return false;
-        }
-    };
-})();
-</script>
-<script src="https://cdn.bootcss.com/headroom/0.9.1/headroom.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.10.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js"></script>
-<script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
-<script>
-var postDirectory = new Headroom(document.getElementById("directory-content"), {
-    tolerance: 0,
-        offset : 280,    classes: {
-        initial: "initial",
-        pinned: "pinned",
-        unpinned: "unpinned"
-    }
-});
-postDirectory.init();
-var header = new Headroom(document.getElementById("header"), {
-    tolerance: 0,
-    offset : 80,
-    classes: {
-      initial: "animated",
-      pinned: "slideDown",
-      unpinned: "slideUp"
-    }
-});
-header.init();
-if ('addEventListener' in document) {
-    document.addEventListener('DOMContentLoaded', function() {
-        FastClick.attach(document.body);
-    }, false);
-}
-</script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-        inlineMath:  [ ["$", "$"] ],
-        displayMath: [ ["$$","$$"] ],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
-        ignoreClass:"comment-content"
-    },
-    "HTML-CSS": {
-        availableFonts: ["STIX","TeX"],
-        showMathMenu: false
-    }
-});
-MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-</script>
 <script src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="form-control cb-search-content" style="position: fixed; top: 60px" placeholder="文章标题 日期 标签" >
+    <div style="position: fixed; top: 16px; right: 16px; ">
+        <img src="/search/img/cb-close.png"  id="cb-close-btn"/>
+    </div>
+</div>
+<div style="position: fixed; right: 16px; bottom: 20px;">
+    <img src="/search/img/cb-search.png"  id="cb-search-btn"  title="双击ctrl试一下"/>
+</div>
+<link rel="stylesheet" href="/search/css/cb-search.css">
+<script src="/search/js/bootstrap3-typeahead.min.js"></script>
+<script src="/search/js/cb-search.js"></script>
 </body>
 </html>

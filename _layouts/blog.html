@@ -12,15 +12,15 @@
     <div class="navbar-container">
         <a href="/" class="navbar-logo">{{ site.title }}</a>
         <div class="navbar-menu">
-                    {% for link in site.links %}             
+            {% for link in site.links %}             
             <a href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">{{ link.name }}</a>
                 {% endfor %}
           </div>
         <div class="navbar-search" onclick="">
             <span class="icon-search"></span>
-            <form id="search" method="post" action="/l" role="search">
+            <form id="cb-search-btn" method="post" action="/l" role="search">
                 <span class="search-box">
-                    <input type="text" id="input" class="input" name="s" required="true" placeholder="Search..." maxlength="30" autocomplete="off">
+                    <input type="text" id="input" class="input" name="s" required="true"  placeholder="Search..." maxlength="30" autocomplete="off">
                 </span>
             </form>
         </div>
@@ -34,14 +34,16 @@
         </div>
     </div>
 </header>
-<div class="post-header-thumb  bg-{{page.background }}">
-	<div class="post-header-thumb-op" style="background-image:url('{{page.background-image }}');"></div>
-	<div class="post-header-thumb-cover">
+<div class="post-header-thumb bg-white}">
+	<div class="post-header-thumb-op"></div>
+	<div class="post-header-thumb">
 		<div class="post-header-thumb-container">
-			<div class="post-header-thumb-title">
-				 {{ page.title }}</div>
-			<div class="post-header-thumb-meta"> 
-				<time datetime="{{ page.date | date: '%F %H:%M:%S'}}" itemprop="datePublished">{{ page.date | date: "%F %H:%M:%S"}}</time>
+    <h1 class="post-title" itemprop="name headline">
+	{{ page.title }}</h1>
+		 <div class="post-data">  
+	 <time datetime="{{ page.date | date: '%F %H:%M:%S'}}" itemprop="datePublished">发布时间：{{ page.date | date: "%F %H:%M:%S"}}</time>
+     <a href="/tags#{{ page.category }}">博客分类: {{ page.category }}</a>
+    <a href="#read"> 阅读次数: comments</a> 
 			</div>
             <div class="post-tags">
                 {% unless page.tags == empty %}
@@ -215,5 +217,19 @@ var postDirectoryBuild = function() {
 postDirectoryBuild();
 </script>
 <script src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="form-control cb-search-content" style="position: fixed; top: 60px" placeholder="文章标题 日期 标签" >
+    <div style="position: fixed; top: 16px; right: 16px; ">
+        <img src="/search/img/cb-close.png"  id="cb-close-btn"/>
+    </div>
+</div>
+<div style="position: fixed; right: 16px; bottom: 20px;">
+    <img src="/search/img/cb-search.png"  id="cb-search-btn"  title="双击ctrl试一下"/>
+</div>
+<link rel="stylesheet" href="/search/css/cb-search.css">
+<script src="/search/js/bootstrap3-typeahead.min.js"></script>
+<script src="/search/js/cb-search.js"></script>
 </body>
 </html>

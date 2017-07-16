@@ -48,7 +48,7 @@ description: "标签分类的博文"
 							<div class="item-meta clearfix">
               <div class="item-meta-ico bg-ico-image" style="background: url('../stylesheets/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date">
-									{{ post.date | date: "%F %H:%M:%S "}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.category }}   
+								<a href="/archives#{{ post.date | date: "%Y"}}">	{{ post.date | date: "%F %H:%M:%S "}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.category }}   
 								</div>
 							</div>
 						</div>
