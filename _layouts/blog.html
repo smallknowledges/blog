@@ -76,10 +76,16 @@
 	</div>
 	<div id="post-content" class="post-content" itemprop="articleBody">
     <div class="post-tags">
-			<a href="/tags#{{ tag[0] }}">
-            {{ tag[0] }} <span>({{ tag[1].size }})</span>
-            {% unless forloop.last %}{% endunless %}
-          </a>
+			 {% unless page.tags == empty %}
+      {% assign tags_list = page.tags %}
+      {% if tags_list.first[0] == null %}
+      {% for tag in tags_list %} 
+          <a href="/tags#{{ tag }}">
+          {{ tag }} ({{ site.tags[tag].size }})
+          {% unless forloop.last %}{% endunless %}</a>
+      {% endfor %}
+      {% assign tags_list = nil %}
+    {% endunless %} 
 </div>
 {{ content }}
 		<p class="post-info">
