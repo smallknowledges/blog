@@ -1,0 +1,36 @@
+<!-- <section class="fixed-l mw7 center w-100 top-50 tc pb4 nt4">
+  {% if page.previous %}
+    <a href="{{ site.url }}{{ page.previous.url }}" class="no-underline f1 light-blue hover-silver nl5 fl-l ph3">‹</a>
+  {% endif %}
+  {% if page.next %}
+    <a href="{{ site.url }}{{page.next.url}}" class="no-underline f1 light-blue hover-silver nr5 fr-l ph3">›</a>
+  {% endif %}
+</section> -->
+
+
+
+<!-- 
+
+	 <div class="lists-navigator clearfix">
+        <ol class="page-navigator">
+          {% if paginator.previous_page %}
+          <li class="current"><a href="{{ paginator.previous_page_path }}">1</a></li>
+              {% endif %}
+              {{ paginator.page }} / {{ paginator.total_pages }}
+                {% if paginator.next_page %}
+          <li class="next"><a href="{{ paginator.next_page_path }}">→</a></li>     {% endif %}
+        </ol>    </div>
+</div> -->
+
+  <ul class="pager">
+      {% if page.previous %}
+      <li class="previous"><a href="{{ site.BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+      {% else %}
+      <li class="previous disabled"><a>&larr; Previous</a></li>
+      {% endif %}
+      {% if page.next %}
+      <li class="next"><a href="{{ site.BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+      {% else %}
+      <li class="next disabled"><a>Next &rarr;</a>
+      {% endif %}
+    </ul>

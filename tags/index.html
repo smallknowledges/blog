@@ -1,0 +1,62 @@
+---
+title: 全部标签
+description: "标签分类的博文"
+---
+
+<div class="main-content archive-page clearfix">
+  {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tags_list = site_tags | split:',' | sort %}
+          <div class="post-lists">
+			<div class="post-lists-body">
+        <div class="categorys-title">
+            标签分类的博文--点击自动查找相应`Tags`</div>
+  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+    {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+			<div class="post-list-item">
+					<div class="post-list-item-container  bg-red">
+						<div class="item-label  bg-orange">
+							<div class="item-title">
+                <a href="#{{ this_word }}">{{ this_word }}</a>
+              </div>
+							<div class="item-meta clearfix">
+							<div class="item-meta-ico bg-ico-image" style="background: url('../stylesheets/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
+	              <div class="item-meta-date">{{ site.tags[this_word].size }}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		{% endunless %}{% endfor %}	
+			</div>
+		</div>
+	</div>
+
+<div class="main-content archive-page clearfix">
+{% for item in (0..site.tags.size) %}{% unless forloop.last %}
+  {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+     <div id="{{ this_word }}" class="post-lists" >
+    <div class="post-lists-body">
+         <div class="categorys-title"  >
+  {{ this_word }} : {{ site.tags[this_word].size }}
+   </div>
+    {% for post in site.tags[this_word] %}{% if post.title != null %}
+    			<div class="post-list-item" >
+					<div class="post-list-item-container">
+						<div class="item-label">
+							<div class="item-title">
+								<a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+							</div>
+							<div class="item-meta clearfix">
+              <div class="item-meta-ico bg-ico-image" style="background: url('../stylesheets/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
+								<div class="item-meta-date">
+									{{ post.date | date: "%F %H:%M:%S "}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.category }}   
+								</div>
+							</div>
+						</div>
+					</div>
+        </div>  
+          {% endif %}{% endfor %}
+   	</div>
+	</div>
+
+{% endunless %}{% endfor %}
+</div>

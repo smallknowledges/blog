@@ -1,0 +1,46 @@
+<footer class="footer bg-white">
+	<div class="footer-social">
+		<div class="footer-container clearfix">
+			<div class="social-list">
+	 <a class="social zhihu" target="blank" href="https://segmentfault.com/u/liberxue">Segmentfault</a>
+    <a class="social github" target="blank" href="https://github.com/liberxue">GitHub</a>
+    <a class="social twitter" target="blank" href="http://twitter.com/liberxue">Twitter</a>
+     <a class="social rss" target="blank" href="/feed.xml">RSS</a>
+	</div>
+		</div>
+	</div>
+	<div class="footer-meta">
+        <div class="footer-container">
+            <div class="meta-item meta-copyright">
+                <div class="meta-copyright-info">
+                    <a href="index.html" class="info-logo">
+                                                <img src="https://img.metaquant.org/784fff2.png" alt="MetaQuant" />
+                                            </a>
+                    <div class="info-text">
+                        <p>Theme is <a href="https://github.com/liberxue" target="_blank">Pinghsu</a> by <a href="http://www.liberxue.com/" target="_blank">liberxue</a></p>
+                        <p>Powered by <a href="#" target="_blank" rel="nofollow">Jekyll</a></p>
+                        <p>&copy; 2017 <a href="/feed.xml">liberxue.blog</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="meta-item meta-posts">
+                <h3 class="meta-title">置顶文章</h3>
+     <!--置顶-->
+    {% for post in site.posts limit:15 %}
+      {% if post.istop %}
+      <li><a href="{{ post.url }}" title="访问 {{ post.title }}">{{ post.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+        <!--置顶-->
+            </div>
+            <div class="meta-item meta-comments">
+                <h3 class="meta-title">最新文章</h3>
+  {% for post in site.posts limit:14 %}        
+      {% if post.book %}
+ <li><a href="{{ post.url }}" title="访问 {{ post.title }}">{{ post.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+</div>
+		</div>
+    </div>
+</footer>

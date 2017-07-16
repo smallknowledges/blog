@@ -1,0 +1,37 @@
+# ----------- CONFIGURABLE START -----------
+title:            "LiberXue"
+description:      "Full Stack独立开发者|欢迎来到 LiberXue「角落」侃侃理想、谈谈人生、敲敲代码。"
+url:              http://www.liberxue.com # 域名
+signoff:          "LiberXue" # Your name
+facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
+google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
+share:            false # Turn on twitter and facebook share buttons
+# 分页
+paginate: 10
+paginate_path: "page/:num/"
+
+links:
+  - name:         首页
+    url:          /
+    external:     false
+  - name:         书籍
+    url:          /book
+    external:     false
+  - name:         旅游
+    url:          /road
+    external:     false
+  - name:         归档
+    url:          /archives
+    external:     false
+  - name:         标签
+    url:          /tags
+    external:     false
+  - name:         关于
+    url:          /about
+    external:     false
+# ------------ CONFIGURABLE END ------------
+
+permalink:        /:categories/:title
+defaults:
+  - values:
+      layout: "default"
