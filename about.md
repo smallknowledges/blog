@@ -1,10 +1,13 @@
 ---
 layout: blog
-title: 关于liberxue
+title: 关于LiberXue
+description: "关于LiberXue博客角落自述"
 tags: 
-- liberxue
+- LiberXue
 - 简述
 - 关于
+- Liber
+- Xue
 redirect_from:
   - /about/
 ---
