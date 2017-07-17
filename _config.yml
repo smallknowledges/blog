@@ -7,9 +7,9 @@ facebook_appid:   # APP ID for like button, remove from /_includes/share.html if
 google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
 share:            false # Turn on twitter and facebook share buttons
 # 分页
-paginate: 10
-paginate_path: "page/:num/"
-
+paginate: 15
+paginate_path: "page:num"
+gems: [jekyll-paginate]
 links:
   - name:         首页
     url:          /
