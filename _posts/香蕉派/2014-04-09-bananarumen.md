@@ -1,7 +1,7 @@
 ---
 layout: blog
 banana: true
-category: banana
+category: 香蕉派
 title: BANANA PI 入门：香蕉派如何安装系统？
 background-image: http://ot1cc1u9t.bkt.clouddn.com/17-7-16/21437938.jpg
 tags:  

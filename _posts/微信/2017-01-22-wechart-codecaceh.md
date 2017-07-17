@@ -2,7 +2,7 @@
 layout: blog
 title: "微信开发调试阶段浏览器缓存"
 date: 2017-01-22
-category: wechart
+category: 微信
 background-image: http://ot1cc1u9t.bkt.clouddn.com/17-7-16/13004205.jpg
 tags:  
 - 微信

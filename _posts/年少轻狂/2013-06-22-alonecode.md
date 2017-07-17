@@ -2,7 +2,7 @@
 layout: blog
 title: 我是一个码农 我是一个有社交障碍的人
 background-image: http://ot1cc1u9t.bkt.clouddn.com/17-7-16/29078732.jpg
-category: life
+category: 生活碎事
 date: 2013-06-22
 excerpt: 天气很热，城市很冷，心无知觉-----曾经自以为是的幸福和感情。在冷漠的流年中与其说无足轻重还不如说荡然无存——《心是孤独的猎手》
 tags:
