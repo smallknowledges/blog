@@ -11,9 +11,9 @@
             <span>&laquo;</span>
         {% else %}
             {% if paginator.previous_page == 1 %}
-            <a href="/page/?liberxue">
+            <a href="/liberxuepage/?liberxue">
             {% else %}
-            <a href="/page{{ paginator.previous_page }}?liberxue">
+            <a href="/liberxuepage{{ paginator.previous_page }}?liberxue">
             {% endif %}
                 <span>&laquo;</span>
             </a>
@@ -28,7 +28,7 @@
             {% if i == 1 %}
             <a href="/?liberxue">{{i}}</a>
             {% else %}
-            <a href="/page{{i}}?liberxue">{{i}}</a>
+            <a href="/liberxuepage{{i}}?liberxue">{{i}}</a>
             {% endif %}
         </li>
         {% endfor %}
@@ -36,13 +36,13 @@
             {% if paginator.page == paginator.total_pages %}
             <span>&raquo;</span>
             {% else %}
-            <a href="/page{{ paginator.next_page }}?liberxue">
+            <a href="/liberxuepage{{ paginator.next_page }}?liberxue">
                 <span>&raquo;</span>
             </a>
             {% endif %}
         </li>
         <li>
-            <a href="/page{{paginator.total_pages}}?liberxue">
+            <a href="/liberxuepage{{paginator.total_pages}}?liberxue">
                 <span>末页</span>
             </a>
         </li>
