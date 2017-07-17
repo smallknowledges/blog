@@ -27,7 +27,7 @@ tags:
 Rand 是什么？美国智囊团 社会简称`兰德学派` 1946年成立，有多牛：
  
 从1950年的朝鲜战争，到60年代的越南战争，70年代信息技术，再到八、九十年代的苏联解体、两德合并、后冷战时代战略，乃至最近的中东问题、台湾问题、朝鲜问题等，无一不是全球万众瞩目的“明星”问题。对这些问题开展研究。
-链表就是Rand在1955-1956搞得人工智能程序。兰德和DARPA有点类似是非营利性机构，有点远了...
+链表就是Rand在1955-1956搞得人工智能程序。兰德和DARPA有点类似是非营利性机构，有点远了...此处回车
 
 # 链表是怎么来的
  
@@ -45,8 +45,11 @@ Rand 是什么？美国智囊团 社会简称`兰德学派` 1946年成立，有�
 链表结构可以克服数组链表需要预先知道数据大小的缺点，链表结构可以充分利用计算机内存空间，实现灵活的内存动态管理。但是链表失去了数组随机读取的优点，同时链表由于增加了结点的指针域，空间开销比较大。
 
 ## 链表怎么实现
+ 
 Lisp和Scheme这样的语言的`内建数据类型`中就包含了链表的访问和操作
+ 
 程序语言或面向对象语言，如C/C++和Java依靠易变工具来生成链表 这只是一个栗子，其他面向对象语言也可以生成链表
+ 
 链表不受语言和平台限制（windows Linux unix）等都有。
 
 # 单向链表是什么
@@ -78,6 +81,7 @@ list是双向链表的一个抽象，它定义在/include/linux目录下。
 ￼``
 struct list_head {￼struct list_head *next, *prev;￼};
 ``
+ 
 list库提供的list_entry使用了container，通过container可以从list找到整个数据对象，这样list就成为了一种通用的数据结构：
 
 ￼``#define list_entry(ptr, type, member)￼container_of(ptr, type, member)
@@ -97,8 +101,11 @@ list库提供的list_entry使用了container，通过container可以从list找�
 hash链表和双向链表list很相似，它适用于hash表。看一下
  
 ## hash链表的头部定义:
+ 
 ￼``struct hlist_head {￼struct hlist_node *first;￼};``
+ 
 和通常的list比较，hlist只有一个指针，这样就节省了一个指针的内存。如果hash表非常庞大，每个hash表头节省一个指针，整个hash表节省的内存就很可观了。`` 这就是内核中专门定义hash list的原因``
+ 
 - hash list库提供的函数和list相似，具体如下。
 - HLIST_HEAD：定义并初始化一个hash list链表头。
 - hlist_add_head：加一个成员到hash链表头。
