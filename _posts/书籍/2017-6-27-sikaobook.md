@@ -1,11 +1,10 @@
 ---
 layout: blog
 book: true
-background: yellow
 background-image: http://ot1cc1u9t.bkt.clouddn.com/17-7-15/88607289.jpg
 title:  "思考,快与慢"
 date:   2017-06-27
-category: book
+category: 书籍
 tags:  
 - 思考
 - 快与慢

@@ -3,8 +3,8 @@ layout: blog
 istop: true
 title: "Linux双向链表和hash链表单向链表"
 background-image: http://ot1cc1u9t.bkt.clouddn.com/17-7-17/65813959.jpg
-date:  2017-07-17 20:45:16
-category: Linux内核
+date:  2017-07-17 00:45:16
+category: linux内核
 tags:
 - list
 - hashlist
