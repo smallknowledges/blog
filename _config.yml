@@ -31,8 +31,8 @@ links:
     external:     false
 # ------------ CONFIGURABLE END ------------
 
-# permalink:        /:categories/:title
-permalink: /:year/:month/:day/:title.html?liberxue
+permalink:        /:categories/:title.html
+#permalink: /:year/:month/:day/:title.html?liberxue
 defaults:
   - values:
       layout: "default"
