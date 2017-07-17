@@ -7,7 +7,7 @@ category: csharp
 background-image: http://ot1cc1u9t.bkt.clouddn.com/17-7-16/43490780.jpg
 tags:
 - tencent
-- HKEY_CLASSES_ROOT
+- HKEYCLASSES_ROOT
 - 网页启动QQ
 - chrome
 - chromium

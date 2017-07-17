@@ -7,7 +7,7 @@ category: csharp
 background-image: http://ot1cc1u9t.bkt.clouddn.com/17-7-16/30065910.jpg
 tags:
 - unity3d
-- UnityWebPlayer,
+- UnityWebPlayer
 - U3D
 - c#
 - winfrom

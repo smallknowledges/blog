@@ -2,7 +2,7 @@
 layout: blog
 book: true
 title:  "毛姆《寻欢作乐》（百读文库）liberxue一些所感所想和笔记书签"
-tags:  
+tags:
 - 寻欢作乐
 - 毛姆
 - 百读文库
