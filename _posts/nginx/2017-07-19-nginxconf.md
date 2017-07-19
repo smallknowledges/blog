@@ -1,6 +1,5 @@
 ---
 layout: blog
-istop: true
 background-image: http://ot1cc1u9t.bkt.clouddn.com/17-7-16/78801196.jpg
 title:  "Nginx配置文件之nginx.conf详解笔记"
 date:   2017-07-19 19:02
