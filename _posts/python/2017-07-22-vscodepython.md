@@ -2,7 +2,7 @@
 layout: blog
 title:  "两分钟vscode在Mac安装Python环境"
 date:   2017-07-22 16:04:49
-category: python
+category: Python
 background-image: http://ot1cc1u9t.bkt.clouddn.com/17-7-22/62395302.jpg
 tags: 
 - vscode
@@ -11,9 +11,9 @@ tags:
 ---
 周末实在无聊学学Python 大概看了下人们手册 貌似不难 语法很简单哈
  
-开始下载一个pycharm晕死。。。8G内存 风扇呼呼呼。。。。
+开始下载一个``pycharm``晕死。。。8G内存 风扇呼呼呼。。。。
  
-JetBrains是出精品啊，但是这性能。。。
+``JetBrains``是出精品啊，但是这性能。。。
  
 此路不通啊
  
@@ -31,12 +31,13 @@ Python2.7
 
 ```
 所以呢压根不需要安装 
-iTerm
+## iTerm测试下Python
 
 ```
 print "hello,python!"
 
 ```
+## control+D退出
 
 # 打开vscode
 
@@ -50,6 +51,7 @@ fn+5
 vscode提醒需要``pip install pylint``
 pylint是Python代码检查工具让你的Python更规范
 好吧那就安装 当点击install时间。。。。
+ 
 # 安装pip install pylint
 
 ## 默认情况下报错如下：
@@ -83,7 +85,7 @@ OSError: [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/enum'
 sudo /usr/bin/python -m pip install pylint
 ``` 
 ok 
-开始Python世界吧。。。
+## 开始Python世界吧。。。
 
 ```
 import time
