@@ -41,7 +41,7 @@ Python2.7
 print "hello,python!"
 
 ```
-## control+D退出
+* control+D退出
 
 # 打开vscode
 
