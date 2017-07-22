@@ -15,10 +15,10 @@ tags:
 - 兰德
 - 链表
 ---
-
+ 
 # 什么是链表
 
-链表（Linked list）
+## 链表（Linked list）
  
 是一种常见的基础数据结构，是一种`线性表`，但是并不会按线性的顺序存储数据，而是在每一个节点里存到下一个节点的指针(Pointer)
 
@@ -78,14 +78,15 @@ list是双向链表的一个抽象，它定义在/include/linux目录下。
 
 ## 首先看看list的结构定义：
 
-￼``
+￼```
 struct list_head {￼struct list_head *next, *prev;￼};
-``
+```
  
 list库提供的list_entry使用了container，通过container可以从list找到整个数据对象，这样list就成为了一种通用的数据结构：
 
-￼``#define list_entry(ptr, type, member)￼container_of(ptr, type, member)
-    ```
+￼```
+#define list_entry(ptr, type, member)￼container_of(ptr, type, member)
+```
 内核定义了很多对list结构操作的内联函数和宏。
 
 - LIST_HEAD：定义并初始化一个list链表。
@@ -102,9 +103,11 @@ hash链表和双向链表list很相似，它适用于hash表。看一下
  
 ## hash链表的头部定义:
  
-￼``struct hlist_head {￼struct hlist_node *first;￼};``
+￼```
+struct hlist_head {￼struct hlist_node *first;￼};
+```
  
-和通常的list比较，hlist只有一个指针，这样就节省了一个指针的内存。如果hash表非常庞大，每个hash表头节省一个指针，整个hash表节省的内存就很可观了。`` 这就是内核中专门定义hash list的原因``
+和通常的list比较，hlist只有一个指针，这样就节省了一个指针的内存。如果hash表非常庞大，每个hash表头节省一个指针，整个hash表节省的内存就很可观了。``这就是内核中专门定义hash list的原因``
  
 - hash list库提供的函数和list相似，具体如下。
 - HLIST_HEAD：定义并初始化一个hash list链表头。

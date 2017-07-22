@@ -1,4 +1,5 @@
 ---
+istop: true
 layout: blog
 title:  "两分钟vscode在Mac安装Python环境"
 date:   2017-07-22 16:04:49
@@ -9,6 +10,9 @@ tags:
 - Python
 - Mac
 ---
+ 
+# 无聊学学Python
+
 周末实在无聊学学Python 大概看了下人们手册 貌似不难 语法很简单哈
  
 开始下载一个``pycharm``晕死。。。8G内存 风扇呼呼呼。。。。
@@ -18,15 +22,15 @@ tags:
 此路不通啊
  
 
-## 环境：
-```
+# 环境：
+```shell
 Mac 10.12.6 Beta (16G24b)
 vscode：1.14.1
 ```
 
 # Mac 默认自带Python 
 ## 自带Python环境
-```
+```shell
 Python2.7
 
 ```
