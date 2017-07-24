@@ -14,10 +14,10 @@ body>*:last-child{margin-bottom:0!important;}
 p,blockquote,ul,ol,dl,table,pre{margin:20px 0;vertical-align:baseline;}
 h1,h2,h3,h4,h5,h6{font-weight:normal;-webkit-font-smoothing:antialiased;}
 h1 tt,h1 code,h2 tt,h2 code,h3 tt,h3 code,h4 tt,h4 code,h5 tt,h5 code,h6 tt,h6 code{font-size:inherit;}
-h1{font-size:1.4em;color:#222;}
-h2{font-size:1.3em;color:#333;}
-h3{font-size:1.2em;color:#444;}
-h4{font-size:1.1em;color:#555;}
+h1{font-size:1.4em;color:#6f7477;}
+h2{font-size:1.3em;color:#6F7484;}
+h3{font-size:1.2em;color:#333;}
+h4{font-size:1.1em;color:#444;}
 h5{font-size:1.0em;color:#555;}
 h6{font-size:1.0em;color:#555;}
 body>h2:first-child,body>h1:first-child,body>h1:first-child+h2,body>h3:first-child,body>h4:first-child,body>h5:first-child,body>h6:first-child{margin-top:0;padding-top:0;}
@@ -38,8 +38,13 @@ a::before{
 	transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
 	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-
+    transition: transform 0.3s, opacity 0.3s;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 a:hover::before,
 a:focus::before {
