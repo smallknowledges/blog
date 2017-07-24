@@ -38,12 +38,7 @@ a::before{
 	transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
 	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
-    transition: transform 0.3s, opacity 0.3s;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+	transition: transform 0.3s, opacity 0.3s;
 }
 a:hover::before,
 a:focus::before {
@@ -52,7 +47,13 @@ a:focus::before {
 	-webkit-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
 	-moz-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
 	transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
-	opacity: 1;
+    opacity: 1;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }   
 ul,ol{padding-left:30px;}
 ul li>:first-child,ol li>:first-child,ul li ul:first-of-type,ol li ol:first-of-type,ul li ol:first-of-type,ol li ul:first-of-type{margin-top:0;}
