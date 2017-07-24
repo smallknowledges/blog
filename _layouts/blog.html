@@ -205,6 +205,8 @@ var postDirectoryBuild = function() {
             li = document.createElement('li');
             link = document.createElement('a');
             link.href = '#' + titleId[i];
+            link.title = '访问' + titleId[i];
+            link.title = '访问' + titleId[i];
             link.innerHTML = !isDirNum ? contentArr[i] :
                 dirNum.join('.') + ' ' + contentArr[i] ;
             li.appendChild(link);
@@ -216,6 +218,7 @@ var postDirectoryBuild = function() {
 };
 postDirectoryBuild();
 </script>
-<script src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+  <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script >lang=hljs.initHighlightingOnLoad();</script>   
+ </body>
 </html>
