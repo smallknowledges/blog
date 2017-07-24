@@ -39,7 +39,6 @@ a::before{
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
 	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
     transition: transform 0.3s, opacity 0.3s;
-    line-height: 30px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
