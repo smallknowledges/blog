@@ -54,16 +54,17 @@ $(function () {
     setTimeout(function () {
       $('code').removeClass('hljs');
     }, 90);
-})
-</script>
-<script>
-$(document).ready(function(){
-    $.post("http://data.zz.baidu.com/update?site=www.liberxue.com&token=DsRFFbJaLp4WMfKt",
-    {
-     $urls : "http://www.liberxue.com/vscodepython.html",
-    },
-    function(data,status){
-      console.log("数据：" + data + "\n状态：" + status);
-    });
 });
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
 </script>
