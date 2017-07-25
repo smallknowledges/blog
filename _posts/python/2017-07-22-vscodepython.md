@@ -30,14 +30,16 @@ vscode：1.14.1
 
 # Mac 默认自带Python 
 ## 自带Python环境
+
 ```shell
+
 Python2.7
 
 ```
 所以呢压根不需要安装 
 ## iTerm测试下Python
 
-```
+```Python
 print "hello,python!"
 
 ```
@@ -46,9 +48,10 @@ print "hello,python!"
 # 打开vscode
 
 新建一个hello.py 文件名任意只要是.py就可以
-````
+
+```Python
 print "hellow,world!"
-````
+```
 control +s 保存 
 vscode会自动提醒安装Python环境
 fn+5
@@ -60,7 +63,7 @@ pylint是Python代码检查工具让你的Python更规范
 
 ## 默认情况下报错如下：
  
-```
+```Python
 Exception:
 Traceback (most recent call last):
   File "/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/basecommand.py", line 215, in main
@@ -85,13 +88,13 @@ OSError: [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/enum'
 ```
 ## 不用管权限问题直接在vscode终端
 
-```
+```shell
 sudo /usr/bin/python -m pip install pylint
 ``` 
 ok 
 ## 开始Python世界吧。。。
 
-```
+```Python
 import time
 import webbrowser
 while time.time() < 1500642585:
