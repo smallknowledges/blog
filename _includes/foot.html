@@ -56,3 +56,16 @@ $(function () {
     }, 90);
 })
 </script>
+<script>
+$(document).ready(function(){
+ (function(){
+    $.post("http://data.zz.baidu.com/update?site=www.liberxue.com&token=DsRFFbJaLp4WMfKt",
+    {
+     $urls : "http://www.liberxue.com/vscodepython.html",
+    },
+    function(data,status){
+      console.log("数据：" + data + "\n状态：" + status);
+    });
+  });
+});
+</script>
