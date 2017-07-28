@@ -3,7 +3,7 @@ layout: blog
 istop: true
 title: "c#交互JavaScript开发建立捕获前端错误日志"
 background-image: https://o243f9mnq.qnssl.com/2017/06/116099051.jpg
-date:  2017年07月29日 01:12:01
+date:  2017-07-29 01:12:01
 category: javascript
 tags:
 - 捕获前端错误日志
