@@ -3,8 +3,8 @@ layout: blog
 istop: true
 title: "c#交互JavaScript开发建立捕获前端错误日志"
 background-image: https://o243f9mnq.qnssl.com/2017/06/116099051.jpg
-date:  2017-07-29 01:12:01
-category: javascript
+date:   2017-07-28 02:04:49
+category: Javascript
 tags:
 - 捕获前端错误日志
 - JavaScript
@@ -13,11 +13,14 @@ tags:
 - c#
 - winfrom
 - handlerr
+
 ---
 
 # 实现目的
  
-之前开发winfrom和前端交互时间开发工程一直预留了debug console（chormeF12）功能，但是很多时间在项目上线和用户使用过程难免会出现部分错误和异常，想实现一个前端日志库，找了许久一直使用try...catch 但是效果不是很理想，作为强迫症患者onerror虽然实现的目的一样但是貌似跟c#错误日志类一样哈记录下来备用；
+之前开发winfrom和前端交互时间开发工程一直预留了debug console（chormeF12）功能，但是很多时间在项目上线和用户使用过程难免会出现部分错误和异常
+ 
+想实现一个前端日志库，找了许久一直使用try...catch 但是效果不是很理想，作为强迫症患者onerror虽然实现的目的一样但是貌似跟c#错误日志类一样哈记录下来备用；
  
 # onerror事件函数
 如果需要利用 onerror 事件，就必须创建一个处理错误的函数。
@@ -49,7 +52,7 @@ return true or false
 ## 来个栗子
  onerror 事件来捕获错误
   
-```html
+```Html
 <html>
 <head>
 <script type="text/javascript">
@@ -118,11 +121,11 @@ adddlert("Welcome guest!")
 ```
 
 ## c#写入错误日志
-```c#
+```C#
  Toolslog.WriteLog("格式不支持" + "\r\n" + contents.ToString());
 ```
 ## c#自定义错误日志类
-```c#
+```C#
 using System;
 using System.IO;
 

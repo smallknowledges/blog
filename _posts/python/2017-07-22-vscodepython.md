@@ -1,6 +1,6 @@
 ---
-istop: true
 layout: blog
+istop: true
 title:  "两分钟vscode在Mac安装Python环境"
 date:   2017-07-22 16:04:49
 category: Python
@@ -23,7 +23,7 @@ tags:
  
 
 # 环境：
-```shell
+```Shell
 Mac 10.12.6 Beta (16G24b)
 vscode：1.14.1
 ```
@@ -31,7 +31,7 @@ vscode：1.14.1
 # Mac 默认自带Python 
 ## 自带Python环境
 
-```shell
+```Shell
 
 Python2.7
 
@@ -88,7 +88,7 @@ OSError: [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/enum'
 ```
 ## 不用管权限问题直接在vscode终端
 
-```shell
+```Shell
 sudo /usr/bin/python -m pip install pylint
 ``` 
 ok 
