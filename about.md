@@ -1,18 +1,15 @@
 ---
 layout: blog
-title: 关于LiberXue
-description: "关于LiberXue博客角落自述"
+title: 关于Arryla
+description: "关于Arryla博客角落自述"
 tags: 
-- LiberXue
+- Arryla
 - 简述
 - 关于
-- Liber
-- Xue
-- 坐井观天阔
+- Arryla
 redirect_from:
   - /about/
 ---
-
 # Hello World
  
 又换了个博客主题 这次终于看见不那么难受了
